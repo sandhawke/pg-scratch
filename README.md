@@ -6,7 +6,13 @@ Assumes you've set up the right environment variables to connect to
 the PostgreSQL server of your choice.   Something like:
 
 ```sh
-export PGHOST=localhost PGUSER=alice PGDATABASE=alicedev PGPASSWORD=3e9f98b93350b90dd7ab88c2d94c172b0061c2a8f55b48b1
+$ export PGHOST=localhost PGUSER=alice PGDATABASE=alicedev PGPASSWORD=3e9f98b93350b90dd7ab88c2d94c172b0061c2a8f55b48b1
+$ psql
+psql (9.6.3)
+SSL connection (protocol: TLSv1.2, cipher: ECDHE-RSA-AES256-GCM-SHA384, bits: 256, compression: off)
+Type "help" for help.
+
+alicedev=> 
 ```
 
 and of course
