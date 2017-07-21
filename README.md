@@ -7,6 +7,7 @@ const pg = require('pg')
 
 const pool = new pg.Pool()
 ...
+await pool.end()
 ```
 
 do
@@ -14,6 +15,8 @@ do
 const pgscr = require('pg-scratch')
 
 const pool = new pgscr.Pool()
+...
+await pool.end()
 ```
 
 and you'll get a new, fresh, clean, empty, pure, and beautiful database, every time.
