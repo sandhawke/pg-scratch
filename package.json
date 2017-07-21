@@ -1,0 +1,37 @@
+{
+  "name": "pg-scratch",
+  "version": "0.0.1",
+  "description": "Simple scratch (temporary) database for testing PostgreSQL code",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && tap --cov test*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandhawke/pg-scratch.git"
+  },
+  "keywords": [
+    "postgres",
+    "postgresql",
+    "temp",
+    "tmp",
+    "temporary",
+    "scratch",
+    "database",
+    "testing"
+  ],
+  "author": "Sandro Hawke (http://hawke.org/sandro)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sandhawke/pg-scratch/issues"
+  },
+  "homepage": "https://github.com/sandhawke/pg-scratch#readme",
+  "dependencies": {
+    "debug": "^2.6.8",
+    "eventemitter3": "^2.0.3",
+    "pg": "^7.0.1"
+  },
+  "devDependencies": {
+    "tap": "^10.7.0"
+  }
+}
