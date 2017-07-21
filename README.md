@@ -5,7 +5,7 @@ Convenient way (for me) to test PostgreSQL code.
 Assumes you've set up the right environment variables to connect to
 the PostgreSQL server of your choice.   Something like:
 
-```sh
+```
 $ export PGHOST=localhost PGUSER=alice PGDATABASE=alicedev PGPASSWORD=3e9f98b93350b90dd7ab88c2d94c172b0061c2a8f55b48b1
 $ psql
 psql (9.6.3)
@@ -17,8 +17,8 @@ alicedev=>
 
 and of course
 
-```sh
-npm install --save pg-scratch
+```
+$ npm install --save pg-scratch
 ```
 
 # Using it
@@ -55,13 +55,13 @@ This line will get you in psql looking at the most recent scratch
 database you left around:
 
 ```sh
-$(psql -t -c "select concat('psql -d ', datname, '') from pg_database where datname ~ 'scratch_db_.*' order by datname desc limit 1;")
+$ $(psql -t -c "select concat('psql -d ', datname, '') from pg_database where datname ~ 'scratch_db_.*' order by datname desc limit 1;")
 ```
 
 To drop all those databases:
 
 ```sh
-psql -t -c "select concat('drop database ', datname, ';') from pg_database where datname ~ 'scratch_db_\d+_\d+';" | psql
+$ psql -t -c "select concat('drop database ', datname, ';') from pg_database where datname ~ 'scratch_db_\d+_\d+';" | psql
 ```
 
 Hopefully it wont also drop database containing all your important
